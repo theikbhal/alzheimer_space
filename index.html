@@ -94,6 +94,25 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
         }
 
         .cta-btn {
@@ -288,10 +307,14 @@
 
     <header>
         <nav class="nav">
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <span>🧠</span> Alzheimer’s Connect
+            </a>
+            <div class="nav-links">
+                <a href="stages_of_alzheimers.html" class="nav-link">Disease Stages</a>
+                <a href="site_index.html" class="nav-link">Explore Hub</a>
+                <a href="https://buymeacoffee.com/theikbhal" target="_blank" class="cta-btn">Support Caregivers</a>
             </div>
-            <a href="https://buymeacoffee.com/theikbhal" target="_blank" class="cta-btn">Support Caregivers</a>
         </nav>
     </header>
 

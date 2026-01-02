@@ -4,249 +4,353 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stages of Alzheimer’s Disease</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Stages of Alzheimer’s | Understanding the Journey</title>
+    <meta name="description"
+        content="A detailed guide to the stages of Alzheimer's disease, from early signs to late-stage care. Understand the progression and symptoms.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #f59e0b;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
-            padding: 0
+            padding: 0;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #f8fafc;
-            color: #1f2937;
+            background: #0f172a;
+            color: var(--text-main);
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Animated Background */
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            filter: blur(80px);
+            animation: pulse 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1.3);
+                opacity: 0.8;
+            }
         }
 
         header {
             position: sticky;
             top: 0;
-            z-index: 10;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid #e5e7eb;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 100;
         }
 
         .nav {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
-            padding: 14px 16px;
+            padding: 1rem 1.5rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
+            font-size: 1.5rem;
             font-weight: 700;
-            font-size: 18px
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .coffee {
-            background: #ffdd00;
-            padding: 8px 14px;
-            border-radius: 999px;
-            font-weight: 600
+        .back-home {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .back-home:hover {
+            color: var(--primary);
         }
 
         .hero {
-            max-width: 1100px;
+            max-width: 900px;
             margin: auto;
-            padding: 60px 16px 40px;
+            padding: 6rem 1.5rem 3rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: clamp(26px, 4vw, 40px);
-            margin-bottom: 12px
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to bottom, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero p {
-            color: #4b5563;
-            max-width: 760px;
-            margin: auto
-        }
-
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 16px
-        }
-
-        .stage {
-            background: #ffffff;
-            border-radius: 22px;
-            padding: 26px;
-            margin-bottom: 22px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-            transition: transform .3s ease
-        }
-
-        .stage:hover {
-            transform: translateY(-4px)
-        }
-
-        .stage h2 {
-            margin-bottom: 8px
-        }
-
-        .time {
-            font-weight: 600;
-            color: #4f46e5;
-            margin-bottom: 10px
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin-top: 14px
-        }
-
-        .box {
-            background: #f9fafb;
-            border-radius: 16px;
-            padding: 16px
-        }
-
-        .box h4 {
-            margin-bottom: 6px
-        }
-
-        .cta {
-            text-align: center;
-            margin: 40px 16px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: #fff;
-            border-radius: 28px;
-            padding: 40px 20px
-        }
-
-        .cta a {
+        .badge {
             display: inline-block;
-            margin-top: 14px;
-            background: #ffdd00;
-            color: #111827;
-            padding: 12px 20px;
+            padding: 0.25rem 0.75rem;
+            background: rgba(99, 102, 241, 0.2);
+            color: #818cf8;
             border-radius: 999px;
-            font-weight: 700
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .stage-container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+        }
+
+        .stage-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+            transition: transform 0.4s ease;
+        }
+
+        .stage-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .stage-number {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.5);
+        }
+
+        .stage-card h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .stage-card p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .symptoms-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .symptom-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--glass-border), transparent);
+            z-index: -1;
         }
 
         footer {
+            padding: 4rem 1.5rem;
             text-align: center;
-            padding: 30px;
-            color: #6b7280;
-            font-size: 14px
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .stage-card {
+                padding: 2rem;
+            }
+
+            .stage-number {
+                left: 20px;
+            }
+
+            .hero {
+                padding: 4rem 1.5rem 2rem;
+            }
         }
     </style>
 </head>
 
 <body>
+    <div class="bg-glow"></div>
 
     <header>
-        <div class="nav">
-            <div class="logo">🧠 Alzheimer’s Stages</div>
-            <a class="coffee" href="https://buymeacoffee.com/theikbhal" target="_blank">☕ Buy Me a Coffee</a>
-        </div>
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <span>🧠</span> Alzheimer’s Connect
+            </a>
+            <a href="index.html" class="back-home">← Back to Communities</a>
+        </nav>
     </header>
 
-    <div class="hero">
-        <h1>Stages of Alzheimer’s Disease</h1>
-        <p>
-            Alzheimer’s progresses in stages. Understanding symptoms, expected timeline,
-            and precautions at each stage helps families plan better care and safety.
-        </p>
-    </div>
+    <main>
+        <section class="hero">
+            <span class="badge">Disease Progression Guide</span>
+            <h1>The Stages of Alzheimer’s</h1>
+            <p>While every journey is unique, understanding the typical progression helps families plan, adapt, and
+                provide the best care at every turn.</p>
+        </section>
 
-    <section>
-        <div class="stage">
-            <h2>1️⃣ Preclinical Alzheimer’s</h2>
-            <div class="time">⏳ Duration: 5–10 years</div>
-            <div class="grid">
-                <div class="box">
-                    <h4>Symptoms</h4>
-                    <p>No visible symptoms. Brain changes silently begin.</p>
+        <div class="stage-container">
+            <div class="timeline-line"></div>
+
+            <!-- Stage 1 -->
+            <article class="stage-card">
+                <div class="stage-number">Stage 1</div>
+                <h2>Preclinical (No Symptoms)</h2>
+                <p>Brain changes begin years before any noticeable signs. During this silent phase, amyloid plaques and
+                    tangles start to form, but the individual appears perfectly healthy.</p>
+                <div class="symptoms-list">
+                    <div class="symptom-item">No outward cognitive decline</div>
+                    <div class="symptom-item">Identifiable only through biomarkers/imaging</div>
+                    <div class="symptom-item">Can last for decades</div>
                 </div>
-                <div class="box">
-                    <h4>Next Stage</h4>
-                    <p>Mild memory problems may slowly appear.</p>
+            </article>
+
+            <!-- Stage 2 -->
+            <article class="stage-card">
+                <div class="stage-number">Stage 2</div>
+                <h2>Mild (Early-Stage)</h2>
+                <p>Subtle difficulties emerge that might be mistaken for "normal aging." The individual can often still
+                    live independently but may struggle with complex tasks.</p>
+                <div class="symptoms-list">
+                    <div class="symptom-item">Forgetting recent conversations</div>
+                    <div class="symptom-item">Difficulty finding the right words</div>
+                    <div class="symptom-item">Misplacing valuable objects</div>
+                    <div class="symptom-item">Trouble planning or organizing</div>
                 </div>
-                <div class="box">
-                    <h4>Precautions</h4>
-                    <p>Exercise, healthy diet, mental activity, manage BP & sugar.</p>
+            </article>
+
+            <!-- Stage 3 -->
+            <article class="stage-card">
+                <div class="stage-number">Stage 3</div>
+                <h2>Moderate (Middle-Stage)</h2>
+                <p>This is typically the longest stage. Symptoms become pronounced, and the need for daily assistance
+                    grows as confusion and personality changes set in.</p>
+                <div class="symptoms-list">
+                    <div class="symptom-item">Confusion about time and place</div>
+                    <div class="symptom-item">Difficulty recognizing friends/family</div>
+                    <div class="symptom-item">Personality changes (agitation, apathy)</div>
+                    <div class="symptom-item">Needing help with dressing/bathing</div>
                 </div>
-            </div>
+            </article>
+
+            <!-- Stage 4 -->
+            <article class="stage-card">
+                <div class="stage-number">Stage 4</div>
+                <h2>Severe (Late-Stage)</h2>
+                <p>In the final stage, cognitive and physical abilities decline significantly. Around-the-clock care is
+                    required as the brain loses its ability to control the body.</p>
+                <div class="symptoms-list">
+                    <div class="symptom-item">Loss of ability to communicate</div>
+                    <div class="symptom-item">Profound memory loss (unaware of surroundings)</div>
+                    <div class="symptom-item">Physical decline (walking, swallowing)</div>
+                    <div class="symptom-item">Total dependence on caregivers</div>
+                </div>
+            </article>
         </div>
 
-        <div class="stage">
-            <h2>2️⃣ Mild Alzheimer’s (Early Stage)</h2>
-            <div class="time">⏳ Duration: 2–4 years</div>
-            <div class="grid">
-                <div class="box">
-                    <h4>Symptoms</h4>
-                    <p>Forgetfulness, losing items, word-finding difficulty.</p>
-                </div>
-                <div class="box">
-                    <h4>Next Stage</h4>
-                    <p>Confusion and daily task difficulty increase.</p>
-                </div>
-                <div class="box">
-                    <h4>Precautions</h4>
-                    <p>Daily routine, reminders, medication supervision, driving review.</p>
-                </div>
+        <section style="text-align: center; padding: 4rem 1.5rem;">
+            <div class="stage-card"
+                style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(99, 102, 241, 0.05));">
+                <h2 style="margin-bottom: 1rem;">Early Detection is Key</h2>
+                <p style="margin-bottom: 2rem;">If you notice these signs in yourself or a loved one, consult a
+                    healthcare professional. Early diagnosis allows for better symptoms management and future planning.
+                </p>
+                <a href="index.html#communities" class="btn"
+                    style="background: var(--primary); color: white; padding: 0.8rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600;">Find
+                    Community Support</a>
             </div>
-        </div>
-
-        <div class="stage">
-            <h2>3️⃣ Moderate Alzheimer’s (Middle Stage)</h2>
-            <div class="time">⏳ Duration: 2–6 years</div>
-            <div class="grid">
-                <div class="box">
-                    <h4>Symptoms</h4>
-                    <p>Disorientation, mood changes, sleep issues, wandering.</p>
-                </div>
-                <div class="box">
-                    <h4>Next Stage</h4>
-                    <p>Loss of independence and communication.</p>
-                </div>
-                <div class="box">
-                    <h4>Precautions</h4>
-                    <p>Home safety locks, ID bracelet, caregiver supervision.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="stage">
-            <h2>4️⃣ Severe Alzheimer’s (Late Stage)</h2>
-            <div class="time">⏳ Duration: 1–3+ years</div>
-            <div class="grid">
-                <div class="box">
-                    <h4>Symptoms</h4>
-                    <p>Unable to speak clearly, recognize family, or move independently.</p>
-                </div>
-                <div class="box">
-                    <h4>Next Stage</h4>
-                    <p>Full-time care required.</p>
-                </div>
-                <div class="box">
-                    <h4>Precautions</h4>
-                    <p>Prevent bedsores, feeding support, infection monitoring.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="cta">
-        <h2>Support Alzheimer’s Awareness</h2>
-        <p>Help us build simple, caring resources for patients and families.</p>
-        <a href="https://buymeacoffee.com/theikbhal" target="_blank">Support This Project ☕</a>
-    </div>
+        </section>
+    </main>
 
     <footer>
-        © 2026 Alzheimer’s Care Guide • Built with empathy
+        <p>© 2026 Alzheimer’s Connect • Supporting Families & Caregivers</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">General information only. Always consult medical professionals
+            for health advice.</p>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.stage-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(card);
+        });
+    </script>
 </body>
 
 </html>

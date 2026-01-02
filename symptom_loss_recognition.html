@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loss of Recognition | Alzheimer’s Symptoms</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f43f5e;
+            /* Red for deep emotional impact */
+            --secondary: #8b5cf6;
+            --bg-dark: #0f172a;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 70% 30%, rgba(244, 63, 94, 0.15) 0%, transparent 50%);
+            filter: blur(80px);
+        }
+
+        header {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 6rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .category {
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .symptom-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .symptom-card h2 {
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+
+        .content-block {
+            margin-bottom: 2.5rem;
+        }
+
+        .content-block h3 {
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .content-block p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .coping-tips {
+            list-style: none;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .tip-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .tip-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .symptom-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-glow"></div>
+
+    <header>
+        <a href="index.html" class="logo">🧠 Alzheimer’s Connect</a>
+        <a href="site_index.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Site
+            Index</a>
+    </header>
+
+    <div class="container">
+        <span class="category">Severe Symptoms</span>
+        <h1>Loss of Recognition (Agnosia)</h1>
+        <p class="lead">One of the most emotionally challenging stages for family members is when their loved one can no
+            longer recognize faces, names, or even their own reflection.</p>
+
+        <section class="symptom-card">
+            <h2>Understanding the Impact</h2>
+
+            <div class="content-block">
+                <h3>What is Agnosia?</h3>
+                <p>Agnosia is the inability to process sensory information. In Alzheimer's, this most commonly manifests
+                    as Prosopagnosia—the inability to recognize faces, including those of lifelong partners and
+                    children.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Why it Happens</h3>
+                <p>As the disease progresses into the moderate and severe stages, the damage spreads to the temporal and
+                    occipital lobes, which are responsible for storing and retrieving facial and object templates.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>The Emotional Weight</h3>
+                <p>For caregivers, being looked at like a stranger by a parent or spouse is often described as "the
+                    grieving before the death." It is a profound test of emotional endurance.</p>
+            </div>
+        </section>
+
+        <section class="symptom-card" style="border-color: rgba(244, 63, 94, 0.3);">
+            <h2>How to Respond</h2>
+            <div class="coping-tips">
+                <div class="tip-item">
+                    <strong>Don't Test Memory</strong>
+                    "Do you know who I am?" or "Remember my name?" often causes anxiety. Instead, introduce yourself
+                    gently: "Hi Mom, it's your daughter, Sarah."
+                </div>
+                <div class="tip-item">
+                    <strong>Focus on Emotions</strong>
+                    Even if they don't know *who* you are, they often recognize the *feeling* of safety and love your
+                    presence provides. Connect through touch, tone, and music.
+                </div>
+                <div class="tip-item">
+                    <strong>Use Old Photos</strong>
+                    Sometimes black and white photos or images from their youth can trigger recognition better than
+                    current images, as those memories are deeper.
+                </div>
+            </div>
+        </section>
+
+        <div class="nav-buttons">
+            <a href="site_index.html" class="btn btn-outline">← Back to Index</a>
+            <a href="index.html" class="btn btn-primary">Join Community Support</a>
+        </div>
+    </div>
+
+    <footer
+        style="padding: 4rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--glass-border);">
+        © 2026 Alzheimer’s Connect • Supporting each other through the hardest days.
+    </footer>
+</body>
+
+</html>
